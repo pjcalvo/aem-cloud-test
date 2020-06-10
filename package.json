@@ -1,0 +1,23 @@
+{
+  "name": "aem-cloud-test",
+  "version": "1.0.0",
+  "description": "Test Repo for AEM CLoud",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjcalvo/aem-cloud-test.git"
+  },
+  "author": "pablo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjcalvo/aem-cloud-test/issues"
+  },
+  "homepage": "https://github.com/pjcalvo/aem-cloud-test#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
