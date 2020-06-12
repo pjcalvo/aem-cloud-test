@@ -3,10 +3,10 @@ version: "v2"
 branches:
   include:
     - master
-    - feature/camello
   exclude:
-    - isse/
+    - issue/*
     - newStuff
+    - feature/camello
 build:
   image: node:10
   script:
