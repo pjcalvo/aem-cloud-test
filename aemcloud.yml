@@ -1,7 +1,7 @@
 ---
 version: "v2"
 branches:
-  include:
+  only:
     - master
     - develop
   exclude:
