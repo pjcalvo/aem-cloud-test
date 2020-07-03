@@ -11,6 +11,3 @@ build:
   script:
     - npm install
     - npm test
-  artifact_path:
-    - test-camel-multi/target
-    - ui/target/*.zip
