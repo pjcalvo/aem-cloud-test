@@ -15,9 +15,9 @@ pipeline:
       - echo 'step1'
       - npm run test
   - name: build
+    trigger: manual
     image: node:12
     script:
       - npm install
       - echo 'step2'
       - npm run build
-
