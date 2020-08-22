@@ -8,15 +8,17 @@ branches:
     - feature/*
 pipeline:
   - name: test
+    trigger: manual
     image: node:10
     script:
       - npm install
       - echo 'step1'
-      - npm cachetes
+      - npm run test
+      - npm run papaya
   - name: build
-    trigger: manual
     image: node:12
     script:
       - npm install
       - echo 'step2'
       - npm run build
+
