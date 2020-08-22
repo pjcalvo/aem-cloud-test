@@ -21,3 +21,4 @@ pipeline:
       - npm install
       - echo 'step2'
       - npm run build
+
