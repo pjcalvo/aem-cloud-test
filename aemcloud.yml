@@ -14,6 +14,7 @@ pipeline:
       - echo 'step1'
       - npm cachetes
   - name: build
+    trigger: manual
     image: node:12
     script:
       - npm install
