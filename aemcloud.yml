@@ -8,7 +8,6 @@ branches:
     - feature/*
 pipeline:
   - name: test
-    trigger: manual
     image: node:10
     script:
       - npm install
