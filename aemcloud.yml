@@ -13,11 +13,9 @@ pipeline:
       - npm install
       - echo 'step1'
       - npm run test
-      - npm run papaya
   - name: build
     image: node:12
     script:
       - npm install
       - echo 'step2'
       - npm run build
-
