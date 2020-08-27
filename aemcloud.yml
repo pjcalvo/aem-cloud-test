@@ -6,16 +6,30 @@ branches:
     - develop
   exclude:
     - feature/*
+environments:
+  - name: config1
+    author: true
+    publish: true
+    aem_version: 6.4.0
+    sample_content: true
+    packages:
+      - repos/hoodoo-digital%20%2F%20aem.cloud%20%2F%20ustudio-connector/best-feature-ever/builds/a8852669-68a2-4969-a371-9e8e868492e0/ustudio-connector-app-1.0.0-SNAPSHOT.zip
+      - packages/6.4-workfront-connector-1.7.2.zip
 pipeline:
-  - name: test
-    image: node:10
-    script:
-      - npm install
-      - echo 'step1'
-      - npm run test
   - name: build
-    image: node:12
+    image: maven:3.5-jdk-8
     script:
+      - mvn package -DskipTests=true
+    artifact_path: 
+      - app/target
+    sync_root: app/src/main/content
+  - name: test
+    trigger: manual
+    image: node10
+    env_on_demand:
+      environment: config1
+      instance: author
+    script:
+      - cd e2e
       - npm install
-      - echo 'step2'
-      - npm run build
+      - npm run test
