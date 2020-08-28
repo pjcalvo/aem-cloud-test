@@ -26,9 +26,7 @@ pipeline:
   - name: test
     trigger: manual
     image: node10
-    env_on_demand:
-      environment: config1
-      instance: author
+    start_env_on_demand: config1
     script:
       - cd e2e
       - npm install
